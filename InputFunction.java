@@ -24,7 +24,7 @@ public class InputFunction {
         System.out.print("How many team data are you planning to enter?");
         int userInput = scanner.nextInt();
         scanner.nextLine();
-        System.out.print(userInput);
+        
 
         
         
@@ -97,7 +97,7 @@ public class InputFunction {
                     try{
                         System.out.print("Enter Goal scored\n");
                         int GoalScored = scanner.nextInt();
-                        System.out.println(GoalScored);
+                        
                     
                         if(GoalScored < 0 ){
                             throw new IllegalArgumentException("Goal scored cannot be negative!!");
@@ -119,7 +119,7 @@ public class InputFunction {
                         System.out.print("Enter Goal scored against\n");
                         int GoalAgainst = scanner.nextInt();
                         scanner.nextLine();
-                        System.out.println(GoalAgainst);
+                        
                         if(GoalAgainst < 0 ){
                             throw new IllegalArgumentException("Goal scored cannot be negative!!");
                         }
@@ -139,7 +139,7 @@ public class InputFunction {
                     try{
                         System.out.print("Enter Group");
                         String Group = scanner.nextLine();
-                        System.out.println(Group);
+                        
                         if (!Group.equals("A") && !Group.equals("B") && !Group.equals("C") && !Group.equals("D")) {
                             throw new IllegalArgumentException("Invalid group. Please enter A, B, C, or D.");
                         }
@@ -172,6 +172,8 @@ public class InputFunction {
         return FileName;
     }
     
+
+    // This function is to perform bubble sorting to sort the data as per its NetGoal  of the team
     public static void NetGoalSorting(ObjectClass[] ArrayList){
         int arraylength = ArrayList.length;
         boolean swapped;
@@ -195,7 +197,8 @@ public class InputFunction {
         
         } while (swapped);
     }
-
+     
+    // This function is to perform bubble sorting to sort the data as per its GoalScored of the team
     public static void GoalScoredSorting(ObjectClass[] ArrayList){
         int arraylength = ArrayList.length;
         boolean swapped;
@@ -218,7 +221,7 @@ public class InputFunction {
     }
     
     
-    
+    // This function is to perform bubble sorting to sort the data as per its GoalAgainst of the team
     public static void GoalAgainstSorting(ObjectClass[] ArrayList){
         int arraylength = ArrayList.length;
         boolean swapped;

@@ -4,19 +4,21 @@ import java.io.FileReader;
 import java.util.concurrent.CountDownLatch;
 
 public class Reader {
+
+    // This function is to read the file and make object with that file and store it into an array.
     public static void ReadFile(String FileName,ObjectClass[] Objectarray){
         
         try {
             
             BufferedReader br = new BufferedReader(new FileReader(FileName));
             String headerLine = br.readLine();
-            System.out.println(headerLine);
+            
             String Line;
             int ArraySize = 0;
             
             while((Line = br.readLine()) != null){
                 
-                System.out.println(Line);
+                
                 String[] Values =Line.split(",");
                 String one = Values[0];
                 String two = Values[1];
@@ -51,13 +53,15 @@ public class Reader {
         }
         
     }
+   
+    //  This function is to count the data from the file and count the number of line in that file.
     public static int Count(String FileName){
         int Count = 0;
         try {
             
             BufferedReader br = new BufferedReader(new FileReader(FileName));
             String headerLine = br.readLine();
-            System.out.println(headerLine);
+            
             String Line;
             
             while((Line = br.readLine()) != null){

@@ -2,47 +2,24 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Sorting {
+    
+    // This function is to take any array and display all the attributes of that array.
     public static void DataAnalysis(ObjectClass[] ArrayList){
-        // this is to display net goals. 
         
-        System.out.print("TeamName******Goalsmade******Goalsfor******Netgoals\n");
+        
+        System.out.print("TeamName------Goalsmade------Goalsfor------Netgoals\n");
         for(int i = ArrayList.length-1; i>= 0 ; i--){
             if (ArrayList[i] instanceof Object){
                 ArrayList[i].DisplayAll();
 
             } 
-            
-            
-            
-
         }
         return ;
     }
-    public static void DataAnalysis2(ObjectClass[] ArrayList){
-        // this is to display net goals. 
-        System.out.print("***************________________The Goal scored  of the data in the array______________*****************\n");
-        System.out.print("TeamName         GoalScored\n");
-        for(int i = ArrayList.length-1; i>= 0 ; i--){
-            if (ArrayList[i] instanceof Object){
-                ArrayList[i].GoalScored();
-            }
+    
+    
 
-        }
-        return;
-    }
-    public static void DataAnalysis3(ObjectClass[] ArrayList){
-        // this is to display net goals. 
-        System.out.print("***************________________The goal againstx of the data in the array______________*****************\n");
-        System.out.print("TeamName         GoalAgainst\n");
-        for(int i = ArrayList.length-1; i>= 0 ; i--){
-            if (ArrayList[i] instanceof Object){
-                ArrayList[i].GoalAgainst();
-            }
-
-        }
-        return;
-
-    }
+    // This function is to take an array as an input and as per the group decided by the user it filters the data accordingly 
     public static void GroupSorting(ObjectClass[] ArrayList, int count,String checkString) {
         
         try {
@@ -86,6 +63,9 @@ public class Sorting {
 
             
 }
+     
+    //  This function is to the sub function of Group sorting ,it takes the filter data object and perform required sorting
+
     public static void GroupEvaluation(ObjectClass[] ArrayList,int Count,String GroupCode){
         ObjectClass[] NewArray = new ObjectClass[Count];
         int Counter = 0;
@@ -113,6 +93,8 @@ public class Sorting {
         Sorting.DataAnalysis(AgainstArray);
 
     }
+    
+    // This function is to count the number of object in the array 
     public static int  GroupCount(ObjectClass[] ArrayList,int Count,String GroupCode){
         int GroupCounter = 0;
         for(int i = 0; i < ArrayList.length; i++) {
